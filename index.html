@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Lista de Alunos</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	 </head>
+	
+	<body>
+
+		<main>
+			<h1>Lista de Alunos</h1>
+
+			<form action="">
+				<input type="search" id="txtFiltro">
+				<button id="btnSearch">Buscar</button>
+				<button id="btnNew">Novo</button>
+			</form>
+
+			<table id="tblAlunos">
+				<thread>
+					<th>RM</th>
+					<th>Nome</th>
+					<th>Prova 01</th>
+					<th>Prova 02</th>
+					<th>Média</th>
+					<th>Situação Final</th>
+					<th></th>
+				</thread>
+				
+				<tbody id="tBody">
+					<tr id="aluno1" class="aluno">
+						<td class="info-rm">102544</td>
+						<td class="info-nome">ALINE DE CASTRO LIMA</td>
+						<td class="info-prova1">5,5</td>
+						<td class="info-prova2">6,0</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td>
+					</tr>
+					<tr id="aluno2" class="aluno">
+						<td class="info-rm">102545</td>
+						<td class="info-nome">ANNA DE LIMA SIQUEIRA</td>
+						<td class="info-prova1">7,5</td>
+						<td class="info-prova2">8,5</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+					<tr id="aluno3" class="aluno">
+						<td class="info-rm">102546</td>
+						<td class="info-nome">CAROLINA ROCHA SILVA</td>
+						<td class="info-prova1">5,0</td>
+						<td class="info-prova2">3,0</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+					<tr id="aluno4" class="aluno">
+						<td class="info-rm">102547</td>
+						<td class="info-nome">CAROLINE SANTOS</td>
+						<td class="info-prova1">1,0</td>
+						<td class="info-prova2">8,5</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+					<tr id="aluno5" class="aluno">
+						<td class="info-rm">102548</td>
+						<td class="info-nome">DAVID HENRIQUE</td>
+						<td class="info-prova1">7,0</td>
+						<td class="info-prova2">8,0</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+					<tr id="aluno6" class="aluno">
+						<td class="info-rm">102549</td>
+						<td class="info-nome">EDUARDA SANTOS SILVA</td>
+						<td class="info-prova1">7,0</td>
+						<td class="info-prova2">5,0</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+					<tr id="aluno7" class="aluno">
+						<td class="info-rm">102550</td>
+						<td class="info-nome">FERNADO PESSOA</td>
+						<td class="info-prova1">6,0</td>
+						<td class="info-prova2">3,0</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+					<tr id="aluno8" class="aluno">
+						<td class="info-rm">102551</td>
+						<td class="info-nome">FELIPE PINHEIRO</td>
+						<td class="info-prova1">6,0</td>
+						<td class="info-prova2">10,0</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+					<tr id="aluno9" class="aluno">
+						<td class="info-rm">102552</td>
+						<td class="info-nome">HENRIQUE COSTA SOUZA</td>
+						<td class="info-prova1">3,0</td>
+						<td class="info-prova2">7,8</td>
+						<td class="info-media">0</td>
+						<td class="info-situacao">-</td>
+						<td class="tdExcluir"><img class="imgExcluir" src="images/lixeira.png"></td></td>
+					</tr>
+				</tbody>				
+			</table>
+			<div class="bloqueio oisumido"></div>
+			<div id="pnlNovo" class="caixa oisumido">
+				<form id="frmNovo">
+					<label for="txtNome">Nome:</label>
+					<input type="text" name="txtNome" id="txtNome">
+
+					<label for="txtRM">RM:</label>
+					<input type="number" name="txtRM" id="txtRM" min="0" max="99999">
+
+					<label for="txtNota1">Nota 1:</label>
+					<input type="number" name="txtNota1" id="txtNota1" min="0" max="10">
+
+					<label for="txtNota2">Nota 2:</label>
+					<input type="number" name="txtNota2" id="txtNota2" min="0" max="10">
+					
+					<button id="btnAdicionar">Adicionar</button>
+					<button id="btnCancelar">Cancelar</button>
+
+					<span id="msg"></span>
+				</form>
+			</div>
+		</main>
+				<script type="text/javascript" src="js/functions.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	 </body>
+
+</html> 
